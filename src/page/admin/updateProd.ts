@@ -166,13 +166,16 @@ const UpdateProd = {
           longDesc: longDesc,
           shortDesc: shortDesc,
           salientfeatures: salientfeatures,
-          category: category
+          category: category,
+          isDelete: true
         }
         console.log(product);
 
         const data = await Update(product)
         if (data) {
           alert("Cập nhật thành công")
+          location.href = "/admin/products"
+
         }
         console.log("Lỗi cmnr");
       }

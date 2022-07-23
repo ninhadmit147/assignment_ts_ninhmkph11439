@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "server": "json-server-auth db.json --port 3001"
+    "server": "json-server-auth --watch db.json --port 3001"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

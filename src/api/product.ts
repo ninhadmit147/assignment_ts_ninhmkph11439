@@ -16,3 +16,6 @@ export const AddProduct = (product: Product[]) => {
 export const Listbycate = (category: number) => {
     return instance.get(`/products?category=${category}`)
 }
+export const statusProd = (product: Product) => {
+    return instance.patch(`/products/${product.id}`, product)
+}

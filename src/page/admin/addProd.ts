@@ -154,11 +154,13 @@ const AddProd = {
           longDesc: longDesc,
           shortDesc: shortDesc,
           salientfeatures: salientfeatures,
-          category: category
+          category: category,
+          isDelete: true
         }
         const data = await AddProduct(product)
         if (data) {
           alert("Thêm thành công")
+          location.href = "/admin/products"
         }
         console.log("Lỗi cmnr");
       }

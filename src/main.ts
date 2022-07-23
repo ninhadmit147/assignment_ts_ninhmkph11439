@@ -2,8 +2,8 @@ import Navigo from 'navigo'
 import './index.css'
 import Admin from './page/admin';
 import AddProd from './page/admin/addProd';
-import FilterProd from './page/admin/filter';
 import UpdateProd from './page/admin/updateProd';
+import HomePage from './page/homePgae';
 
 const router = new Navigo('/', { linksSelector: "a" });
 
@@ -20,7 +20,8 @@ const print = async (component: ComponetBase, id: ComponetBase, params?: any) =>
 }
 
 router.on({
-  '/': () => print(Admin),
+  '/': () => print(HomePage),
+  '/admin/products': () => print(Admin),
   '/admin/product/add': () => print(AddProd),
   '/admin/product/:id/update': (data: any) => {
     const id = +data.data.id
@@ -31,7 +32,7 @@ router.on({
   //     console.log(id);
 
   // }
-  '/admin/products/hehe': () => print(FilterProd)
+
 
 })
 
